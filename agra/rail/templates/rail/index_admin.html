@@ -1,0 +1,33 @@
+{%extends 'base.html'%}
+{% block nav%}
+<div class="container">
+  <h2>Bordered Table</h2>
+  <p>The .table-bordered class adds borders to a table:</p>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>train no</th>
+        <th>train</th>
+        <th>
+          actions
+        </th>
+      </tr>
+      </thead>
+      <tbody>
+        {% for i in t %}
+      <tr>
+        <td class= <div class="col-md-2">
+        </div>{{i.trno }}</td>
+        <td class="col-md-1">{{i.trname}}</td>
+        </td>
+        <td>
+
+
+      <a href="/rail/admin/{{i.trno}}"class="btn btn-primary  icon-chevron-sign-up" role="button">  view</a><a href="/rail/{{i.trno}}/updatet" class="btn btn-primary  icon-retweet" role="button">  update</a><a href="/rail/{{i.trno}}/deletet" class="btn btn-primary  icon-remove" role="button">  delete</a>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{%endblock%}

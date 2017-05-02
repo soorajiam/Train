@@ -1,0 +1,56 @@
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+
+  <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+</head>
+<body>
+<style>
+body {margin: 0;}
+
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul.topnav li a:hover:not(.active) {background-color: #111;}
+
+ul.topnav li a.active {background-color: #4CAF50;}
+
+ul.topnav li.right {float: right;}
+
+@media screen and (max-width: 600px){
+  ul.topnav li.right,
+  ul.topnav li {float: none;}
+}
+</style>
+  <ul class="topnav">
+<li><a class="active" href="/rail/add/t">Add Train</a></li>
+<li><a href="/rail/admin/t">View all train </a></li>
+<li><a href="/rail/add/s">Add Station</a></li>
+<li><a href="/rail/add/d">Add Detail</a></li>
+<li><a href="/rail/search/t/a">Search Train</a></li>
+<li class="right"><a href="#about">Log In</a></li>
+</ul>
+
+<div style="padding:0 16px;">
+</div>
+
+  {% block nav %}
+  {% endblock %}
+</body>
+</html>

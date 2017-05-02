@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body >
+
+<h1><div class= "col-md-offset-5">REGISTER</h1></div>
+<p class="col-md-offset-5">
+
+Enter your details</p>
+<form action="/rail/pregister" method="post">
+  <div class="input-group col-md-2 col-md-offset-5">
+    {%csrf_token%}
+
+    <input type="text" class="form-control " placeholder="email id" name ="email" aria-describedby="basic-addon1">
+  </div>
+  <div class="input-group col-md-2 col-md-offset-5">
+
+    <input type="text" class="form-control " placeholder="fullname" name ="name" aria-describedby="basic-addon1">
+  </div>
+  <div class="input-group col-md-2 col-md-offset-5">
+
+    <input type="text" class="form-control " placeholder="gender" name ="gender" aria-describedby="basic-addon1">
+  </div>
+
+  <div class="input-group col-md-2 col-md-offset-5">
+
+    <input type="number" class="form-control" placeholder="mobile number" name ="mobile" aria-describedby="basic-addon1">
+  </div>
+  <div class="input-group col-md-2 col-md-offset-5">
+
+    <input type="text" class="form-control" placeholder="city" name ="city" aria-describedby="basic-addon1">
+  </div>
+  <div class="input-group col-md-2 col-md-offset-5">
+
+    <input type="text" class="form-control" placeholder="state" name ="state" aria-describedby="basic-addon1">
+  </div>
+  <div class="input-group col-md-2 col-md-offset-5">
+
+    <input type="text" class="form-control" placeholder="username" name ="username" aria-describedby="basic-addon1">
+  </div>
+  <div class="input-group col-md-2 col-md-offset-5">
+
+    <input type="text" class="form-control" placeholder="password" name ="password" aria-describedby="basic-addon1">
+  </div>
+
+  </div>
+
+  </div>
+  <div class="alert alert-info col-md-2 col-md-offset-5" role="alert">  <p class="col-md-offset-5 color="white"" >
+      already a member?
+    <a href="/rail/login">login</a></p></div>
+
+  <button class="btn btn-default col-md-1 col-md-offset-5">register</button>
+  </form>
+  <style>
+  body {
+      background-image: url("http://www.cppr.in/wp-content/uploads/2015/02/Indian-Railways.jpg");
+      background-repeat: no-repeat;
+      background-position: right top;
+      margin-right: 200px;
+      background-attachment: fixed;
+  }
+  </style>
+
+</body>
+
+</html>

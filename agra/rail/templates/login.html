@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body >
+
+<h1><div class= "col-md-offset-5">Login</h1></div>
+<p class="col-md-offset-5">
+
+Enter your details</p>
+<form action="/rail/plogin" method="post">
+  {%csrf_token%}
+  <div class="input-group col-md-2 col-md-offset-5">
+
+    <input type="text" class="form-control " placeholder="Username" name="username" aria-describedby="basic-addon1">
+  </div>
+  <div class="input-group col-md-2 col-md-offset-5">
+
+    <input type="password" class="form-control" placeholder="Password" name="password" aria-describedby="basic-addon1">
+  </div>
+
+  </div>
+
+  </div>
+  <button class="btn btn-default col-md-1 col-md-offset-5">login</button>
+
+  </form>
+  <p class="col-md-offset-5">
+    not a member?
+  <a href="/rail/register">register</a></p>
+  <style>
+  body {
+      background-image: url("http://www.cppr.in/wp-content/uploads/2015/02/Indian-Railways.jpg");
+      background-repeat: no-repeat;
+      background-position: right top;
+      margin-right: 200px;
+      background-attachment: fixed;
+  }
+  </style>
+
+</body>
+
+</html>

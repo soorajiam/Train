@@ -1,0 +1,19 @@
+{%extends 'base.html'%}
+{% block tittle %}{{station.Stname}}{% endblock tittle %}
+{% block nav %}
+
+<h2> <small> {{station.stationC}}</small></h2>
+<ul>
+  <li>
+    {{station.Stname}}
+  </li>
+
+</ul>
+<a href="/rail/{{station.stationC}}/updates" type="button" class="btn btn-default" role="button">update
+</a>
+<a href="/rail/{{station.stationC}}/deletes" type="button" class="btn btn-default" role="button">delete
+</a>
+
+
+</div>
+{% endblock  %}

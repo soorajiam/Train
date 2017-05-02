@@ -1,0 +1,76 @@
+{%extends 'baseU.html'%}
+{% block nav%}
+<div class="container">
+  <h1>Serch trains</h1>
+  <form action="/rail/search/sp" method="post">
+    {%csrf_token%}
+    <div class="input-group col-md-2 col-md-offset-5">
+
+      <input type="text" class="form-control " placeholder="enter station name" name="search" aria-describedby="basic-addon1"value="0">
+    </div>
+
+
+    </div>
+    <button class="btn btn-default col-md-1 col-md-offset-5">search</button>
+
+    </form>
+    <div class="row">
+
+    </div>
+
+  {% for k in s %}
+  <h2>{{k.stationC}}</h2>
+  <h3>{{k.Stname}}</h3>
+
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>order no</th>
+        <th>Train</th>
+
+        <th>
+          Scheduled arrival
+        </th>
+        <th>
+          scheduled Departure
+        </th>
+        <th>
+          arrival
+        </th><th>
+            departure
+        </th>
+
+
+      </tr>
+      </thead>
+      <tbody>
+        {%for j in i%}
+        {% if j.stationC == k %}
+        {% for n in s %}
+        {%if j.stationC == n%}
+
+      <tr>
+        <td class= <div class="col-md-2">
+        {{j.ordn0 }}</td>
+        <td class="col-md-1">{{j.trno}}</td>
+          <td class="col-md-1">{{j.sA}}</td>
+            <td class="col-md-1">{{j.aD}}</td>
+            <td class="col-md-1">{{j.A}}</td>
+            <td class="col-md-1">{{j.D}}</td>
+
+
+
+
+
+      </tr>
+      {%endif%}
+      {%endfor%}
+      {%endif%}
+      {%endfor%}
+
+    </tbody>
+  </table>
+  {% endfor %}
+</div>
+
+{%endblock%}

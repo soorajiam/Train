@@ -1,0 +1,59 @@
+{%extends 'base.html'%}
+{% block nav%}
+<div class="container">
+  {% for k in t %}
+  <h2>{{k.trno}}</h2>
+  <p>{{k.trname}}</p>
+
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>order no</th>
+        <th>Station</th>
+
+        <th>
+          Scheduled arrival
+        </th>
+        <th>
+          scheduled Departure
+        </th>
+        <th>
+          arrival
+        </th><th>
+            departure
+        </th>
+
+        <th>
+          actions
+        </th>
+      </tr>
+      </thead>
+      <tbody>
+        {%for j in i%}
+        {% if j.trno == k %}
+      <tr>
+        <td class= <div class="col-md-2">
+        {{j.ordn0 }}</td>
+        <td class="col-md-1">{{j.stationC}}</td>
+          <td class="col-md-1">{{j.sA}}</td>
+            <td class="col-md-1">{{j.aD}}</td>
+            <td class="col-md-1">{{j.A}}</td>
+            <td class="col-md-1">{{j.D}}</td>
+
+
+
+
+        <td>
+
+
+      <a href="/rail/{{j.pid}}/d"class="btn btn-primary  icon-chevron-sign-up" role="button">  view</a><a href="/rail/{{j.pid}}/updated" class="btn btn-primary  icon-retweet" role="button">  update</a><a href="/rail/{{j.pid}}/deleted" class="btn btn-primary  icon-remove" role="button">  delete</a>
+        </td>
+      </tr>
+      {%endif%}
+      {%endfor%}
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+{%endblock%}
